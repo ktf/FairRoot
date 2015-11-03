@@ -74,6 +74,7 @@ std::string FairMQChannel::GetType() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::GetType: " << boost::diagnostic_information(e);
     }
+    return "";
 }
 
 std::string FairMQChannel::GetMethod() const
@@ -87,6 +88,7 @@ std::string FairMQChannel::GetMethod() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::GetMethod: " << boost::diagnostic_information(e);
     }
+    return "";
 }
 
 std::string FairMQChannel::GetAddress() const
@@ -100,6 +102,7 @@ std::string FairMQChannel::GetAddress() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::GetAddress: " << boost::diagnostic_information(e);
     }
+    return "";
 }
 
 int FairMQChannel::GetSndBufSize() const
@@ -113,6 +116,7 @@ int FairMQChannel::GetSndBufSize() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::GetSndBufSize: " << boost::diagnostic_information(e);
     }
+    return 0;
 }
 
 int FairMQChannel::GetRcvBufSize() const
@@ -126,6 +130,7 @@ int FairMQChannel::GetRcvBufSize() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::GetRcvBufSize: " << boost::diagnostic_information(e);
     }
+    return 0;
 }
 
 int FairMQChannel::GetRateLogging() const
@@ -139,6 +144,7 @@ int FairMQChannel::GetRateLogging() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::GetRateLogging: " << boost::diagnostic_information(e);
     }
+    return 0;
 }
 
 void FairMQChannel::UpdateType(const std::string& type)
@@ -236,6 +242,7 @@ bool FairMQChannel::IsValid() const
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::IsValid: " << boost::diagnostic_information(e);
     }
+    return false;
 }
 
 bool FairMQChannel::ValidateChannel()
@@ -348,6 +355,7 @@ bool FairMQChannel::ValidateChannel()
     {
         LOG(ERROR) << "Exception caught in FairMQChannel::ValidateChannel: " << boost::diagnostic_information(e);
     }
+    return false;
 }
 
 bool FairMQChannel::InitCommandInterface(FairMQTransportFactory* factory, int numIoThreads)
@@ -544,6 +552,7 @@ bool FairMQChannel::SetSendTimeout(const int timeout)
         LOG(ERROR) << "SetSendTimeout() failed - socket is not initialized!";
         return false;
     }
+    return false;
 }
 
 int FairMQChannel::GetSendTimeout() const
@@ -574,6 +583,7 @@ bool FairMQChannel::SetReceiveTimeout(const int timeout)
         LOG(ERROR) << "SetReceiveTimeout() failed - socket is not initialized!";
         return false;
     }
+    return false;
 }
 
 int FairMQChannel::GetReceiveTimeout() const
