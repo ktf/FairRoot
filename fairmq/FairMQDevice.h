@@ -442,7 +442,7 @@ class FairMQDevice : public FairMQStateMachine, public FairMQConfigurable
     void ResetTaskWrapper();
     /// Handles the Reset() method
     void ResetWrapper();
-    /// Shuts down the device (closses socket connections)
+    /// Shuts down the device (closes socket connections)
     void Shutdown();
 
     /// Terminates the transport interface
